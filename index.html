@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Agora — Le Protocole</title>
+    <!-- Tailwind CSS pour le style rapide -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        /* Style personnalisé pour adoucir le fond et le grain */
+        body {
+            background-color: #0a0a0a;
+        }
+    </style>
+</head>
+<body class="text-neutral-200 font-sans antialiased selection:bg-amber-500 selection:text-black">
+
+    <!-- HEADER / EN-TÊTE -->
+    <header class="max-w-4xl mx-auto pt-16 px-6 mb-12">
+        <div class="border-b border-neutral-800 pb-8 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+            <div>
+                <span class="text-xs font-mono tracking-widest text-amber-500 uppercase">Statut : En développement</span>
+                <h1 class="text-3xl font-black tracking-tight uppercase text-neutral-100 mt-1">L'Agora</h1>
+                <p class="text-sm text-neutral-400 mt-2 max-w-md">Le défi fou : 2 ans pour construire un jeu vidéo dans la vraie vie. Suivez l'évolution du protocole étape par étape.</p>
+            </div>
+            <div class="text-left md:text-right font-mono text-xs text-neutral-500">
+                <p>Lancé en : Avril 2026</p>
+                <p class="text-amber-500/80">Objectif : Étage Zéro</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION PRINCIPALE : LE TABLEAU DE BORD -->
+    <main class="max-w-4xl mx-auto px-6 pb-24 space-y-16">
+
+        <!-- ======================================================== -->
+        <!-- CATEGORIE 1 : LES PHASES DE DESIGN (Exemple de section) -->
+        <!-- ======================================================== -->
+        <section class="space-y-4">
+            <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
+                <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">01. Architecture & Game Design</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Carte 1 : Validée -->
+                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-sm font-bold text-neutral-100 font-mono">LE HIGH-CONCEPT</h3>
+                        <span class="text-[10px] font-mono px-2 py-0.5 bg-emerald-950 text-emerald-400 border border-emerald-900 rounded">Validé</span>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">Définition de la promesse centrale de l'hôtel-jeu. Structure narrative globale et règles d'accès à l'Étage Zéro fixées.</p>
+                </div>
+
+                <!-- Carte 2 : En cours -->
+                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-sm font-bold text-neutral-100 font-mono">LEVEL DESIGN : LOBBY</h3>
+                        <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-950 text-amber-400 border border-amber-900 rounded">Sur l'établi</span>
+                    </div>
+                    <p class="text-xs text-neutral-400 leading-relaxed">Tracé des plans au sol du rez-de-chaussée sur papier traditionnel. Gestion des flux de joueurs entre la réception et le lounge.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================== -->
+        <!-- CATEGORIE 2 : SYSTÈME DE JEU (Facile à dupliquer) -->
+        <!-- ======================================================== -->
+        <section class="space-y-4">
+            <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
+                <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">02. Économie & Cartes</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- Carte 3 : En attente / Idée -->
+                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-neutral-700"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-sm font-bold text-neutral-300 font-mono">DESIGN DES BADGES</h3>
+                        <span class="text-[10px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded">En attente</span>
+                    </div>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Création de la charte graphique des cartes d'accès physiques. Impression test sur plastique noir et dorure.</p>
+                </div>
+
+                <!-- Carte 4 : En attente / Idée -->
+                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-neutral-700"></div>
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-sm font-bold text-neutral-300 font-mono">MATHS & ÉQUILIBRAGE</h3>
+                        <span class="text-[10px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded">En attente</span>
+                    </div>
+                    <p class="text-xs text-neutral-500 leading-relaxed">Modélisation des courbes de progression des joueurs. Calcul du taux de drop et de la valeur des points en salon.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TU PEUX COPIER-COLLER UN BLOC <section> ENTIER ICI POUR AJOUTER UNE LOGIQUE -->
+
+    </main>
+
+    <!-- FOOTER MIGNON -->
+    <footer class="max-w-4xl mx-auto px-6 py-8 border-t border-neutral-950 text-center font-mono text-[10px] text-neutral-600">
+        PROJET AGORA — DOCUMENT DE PRODUCTION PUBLIC — NE PAS DIVULGUER SANS PROTOCOLE
+    </footer>
+
+</body>
+</html>
