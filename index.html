@@ -1,114 +1,85 @@
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Agora — Le Protocole</title>
-    <!-- Tailwind CSS pour le style rapide -->
+    <title>PROJET : VERTEX</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Style personnalisé pour adoucir le fond et le grain */
         body {
-            background-color: #0a0a0a;
+            background-color: #222222;
         }
     </style>
 </head>
-<body class="text-neutral-200 font-sans antialiased selection:bg-amber-500 selection:text-black">
+<body class="text-white font-sans antialiased max-w-md mx-auto px-4 py-8 selection:bg-neutral-700">
 
-    <!-- HEADER / EN-TÊTE -->
-    <header class="max-w-4xl mx-auto pt-16 px-6 mb-12">
-        <div class="border-b border-neutral-800 pb-8 flex flex-col md:flex-row md:justify-between md:items-end gap-4">
-            <div>
-                <span class="text-xs font-mono tracking-widest text-amber-500 uppercase">Statut : En développement</span>
-                <h1 class="text-3xl font-black tracking-tight uppercase text-neutral-100 mt-1">L'Agora</h1>
-                <p class="text-sm text-neutral-400 mt-2 max-w-md">Le défi fou : 2 ans pour construire un jeu vidéo dans la vraie vie. Suivez l'évolution du protocole étape par étape.</p>
-            </div>
-            <div class="text-left md:text-right font-mono text-xs text-neutral-500">
-                <p>Lancé en : Avril 2026</p>
-                <p class="text-amber-500/80">Objectif : Étage Zéro</p>
-            </div>
-        </div>
+    <header class="border-2 border-neutral-400 p-4 text-center mb-8 bg-neutral-900/20">
+        <h1 class="text-3xl font-black tracking-wider uppercase">PROJET : VERTEX</h1>
+        <p class="text-lg font-medium text-neutral-300 mt-1">version 1.0</p>
     </header>
 
-    <!-- SECTION PRINCIPALE : LE TABLEAU DE BORD -->
-    <main class="max-w-4xl mx-auto px-6 pb-24 space-y-16">
+    <div class="border-t border-b border-white h-1 mb-8"></div>
 
-        <!-- ======================================================== -->
-        <!-- CATEGORIE 1 : LES PHASES DE DESIGN (Exemple de section) -->
-        <!-- ======================================================== -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
-                <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">01. Architecture & Game Design</h2>
-            </div>
+    <section class="text-center mb-12">
+        <h2 class="text-xl font-bold tracking-wide mb-2">Avancée du projet</h2>
+        
+        <div class="flex items-center justify-center gap-3">
+            <span class="text-lg font-black text-neutral-300">15%</span>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <!-- Carte 1 : Validée -->
-                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-sm font-bold text-neutral-100 font-mono">LE HIGH-CONCEPT</h3>
-                        <span class="text-[10px] font-mono px-2 py-0.5 bg-emerald-950 text-emerald-400 border border-emerald-900 rounded">Validé</span>
-                    </div>
-                    <p class="text-xs text-neutral-400 leading-relaxed">Définition de la promesse centrale de l'hôtel-jeu. Structure narrative globale et règles d'accès à l'Étage Zéro fixées.</p>
-                </div>
-
-                <!-- Carte 2 : En cours -->
-                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-sm font-bold text-neutral-100 font-mono">LEVEL DESIGN : LOBBY</h3>
-                        <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-950 text-amber-400 border border-amber-900 rounded">Sur l'établi</span>
-                    </div>
-                    <p class="text-xs text-neutral-400 leading-relaxed">Tracé des plans au sol du rez-de-chaussée sur papier traditionnel. Gestion des flux de joueurs entre la réception et le lounge.</p>
-                </div>
-
+            <div class="flex border-2 border-red-600 p-0.5 gap-0.5 bg-black w-64 h-7">
+                <div class="flex-1 bg-red-600"></div> <div class="flex-1 bg-red-600"></div> <div class="flex-1 bg-red-600"></div>
+                <div class="flex-1 bg-red-600"></div>
+                <div class="flex-1 bg-red-600"></div>
+                <div class="flex-1 bg-red-600"></div>
+                <div class="flex-1 bg-neutral-700"></div>
+                <div class="flex-1 bg-neutral-700"></div>
+                <div class="flex-1 bg-neutral-700"></div>
+                <div class="flex-1 bg-neutral-700"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ======================================================== -->
-        <!-- CATEGORIE 2 : SYSTÈME DE JEU (Facile à dupliquer) -->
-        <!-- ======================================================== -->
-        <section class="space-y-4">
-            <div class="flex items-center gap-2">
-                <div class="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
-                <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">02. Économie & Cartes</h2>
-            </div>
+    <section class="mb-12">
+        <h2 class="text-2xl font-black text-center tracking-wider uppercase mb-8">NOTES DE MAJ</h2>
+        
+        <div class="relative grid grid-cols-2 gap-8 px-2">
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                
-                <!-- Carte 3 : En attente / Idée -->
-                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-neutral-700"></div>
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-sm font-bold text-neutral-300 font-mono">DESIGN DES BADGES</h3>
-                        <span class="text-[10px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded">En attente</span>
-                    </div>
-                    <p class="text-xs text-neutral-500 leading-relaxed">Création de la charte graphique des cartes d'accès physiques. Impression test sur plastique noir et dorure.</p>
-                </div>
-
-                <!-- Carte 4 : En attente / Idée -->
-                <div class="bg-neutral-900/40 border border-neutral-800 p-5 rounded-lg relative overflow-hidden group hover:border-neutral-700 transition-colors">
-                    <div class="absolute top-0 left-0 w-1 h-full bg-neutral-700"></div>
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-sm font-bold text-neutral-300 font-mono">MATHS & ÉQUILIBRAGE</h3>
-                        <span class="text-[10px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded">En attente</span>
-                    </div>
-                    <p class="text-xs text-neutral-500 leading-relaxed">Modélisation des courbes de progression des joueurs. Calcul du taux de drop et de la valeur des points en salon.</p>
-                </div>
-
+            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white -translate-x-1/2 flex flex-col justify-between items-center py-2">
+                <div class="w-3 h-3 rounded-full bg-neutral-900 border-2 border-white"></div>
+                <div class="w-3 h-3 rounded-full bg-neutral-900 border-2 border-white"></div>
             </div>
-        </section>
 
-        <!-- TU PEUX COPIER-COLLER UN BLOC <section> ENTIER ICI POUR AJOUTER UNE LOGIQUE -->
+            <div class="flex flex-col items-center text-center space-y-3">
+                <div class="w-36 h-36 rounded-2xl border-2 border-white overflow-hidden bg-neutral-800 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Arène 4" class="w-full h-full object-cover">
+                </div>
+                <p class="text-xs text-neutral-300 leading-relaxed font-medium">
+                    Aujourd’hui j’ai avancé sur le design de l’arène numéro 4. Avec le système de...
+                </p>
+                <button class="text-[10px] text-neutral-500 font-bold hover:text-neutral-300 transition-colors">voir plus..</button>
+            </div>
 
-    </main>
+            <div class="flex flex-col items-center text-center space-y-3">
+                <div class="w-36 h-36 rounded-2xl border-2 border-white overflow-hidden bg-neutral-800 shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400" alt="Tenues" class="w-full h-full object-cover">
+                </div>
+                <p class="text-xs text-neutral-300 leading-relaxed font-medium">
+                    Aujourd’hui j’ai avancé sur le design des tenues du personnel.
+                </p>
+                <button class="text-[10px] text-neutral-500 font-bold hover:text-neutral-300 transition-colors">voir plus..</button>
+            </div>
 
-    <!-- FOOTER MIGNON -->
-    <footer class="max-w-4xl mx-auto px-6 py-8 border-t border-neutral-950 text-center font-mono text-[10px] text-neutral-600">
-        PROJET AGORA — DOCUMENT DE PRODUCTION PUBLIC — NE PAS DIVULGUER SANS PROTOCOLE
-    </footer>
+        </div>
+    </section>
+
+    <div class="border-t border-b border-white h-1 mb-8"></div>
+
+    <section class="text-center pb-12">
+        <h2 class="text-2xl font-black tracking-wider uppercase mb-6">PROCHAINE ÉTAPE :</h2>
+        <div class="w-full h-48 border-2 border-white rounded-lg overflow-hidden bg-neutral-800">
+            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600" alt="Prochaine étape" class="w-full h-full object-cover">
+        </div>
+    </section>
 
 </body>
 </html>
