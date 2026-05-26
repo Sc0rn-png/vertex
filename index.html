@@ -6,114 +6,132 @@
     <title>PROJET : VERTEX</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+        /* Couleur de fond identique à tes captures d'écran (anthracite très sombre) */
         body {
-            background-color: #222222;
+            background-color: #0a0a0a;
         }
     </style>
 </head>
-<body class="text-white font-sans antialiased max-w-md mx-auto px-4 py-8 selection:bg-neutral-700">
+<body class="text-neutral-200 font-sans antialiased max-w-md mx-auto px-5 py-8 selection:bg-amber-500 selection:text-black">
 
-    <header class="border-2 border-neutral-400 p-4 text-center mb-8 bg-neutral-900/20">
-        <h1 class="text-3xl font-black tracking-wider uppercase">PROJET : VERTEX</h1>
-        <p class="text-lg font-medium text-neutral-300 mt-1">version 1.0</p>
+    <header class="border border-neutral-800 p-5 text-center mb-8 bg-neutral-900/30 rounded-xl">
+        <span class="text-[10px] font-mono tracking-widest text-amber-500 uppercase">v1.0 — PROTOCOLE</span>
+        <h1 class="text-2xl font-black tracking-tight uppercase text-neutral-100 mt-1">PROJET : VERTEX</h1>
     </header>
 
-    <div class="border-t border-b border-white h-1 mb-8"></div>
+    <div class="border-b border-neutral-900 mb-8"></div>
 
-    <section class="text-center mb-12">
-        <h2 class="text-xl font-bold tracking-wide mb-2">Avancée du projet</h2>
+    <section class="text-center mb-12 bg-neutral-900/20 border border-neutral-900 p-4 rounded-xl">
+        <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400 mb-3">Avancée du projet</h2>
         
         <div class="flex items-center justify-center gap-3">
-            <span class="text-lg font-black text-neutral-300">15%</span>
+            <span class="text-sm font-mono font-bold text-amber-500">15%</span>
             
-            <div class="flex border-2 border-red-600 p-0.5 gap-0.5 bg-black w-64 h-7">
-                <div class="flex-1 bg-red-600"></div>
-                <div class="flex-1 bg-red-600"></div>
-                <div class="flex-1 bg-red-600"></div>
-                <div class="flex-1 bg-red-600"></div>
-                <div class="flex-1 bg-red-600"></div>
-                <div class="flex-1 bg-red-600"></div>
-                <div class="flex-1 bg-neutral-700"></div>
-                <div class="flex-1 bg-neutral-700"></div>
-                <div class="flex-1 bg-neutral-700"></div>
-                <div class="flex-1 bg-neutral-700"></div>
+            <div class="flex border border-amber-500/30 p-0.5 gap-0.5 bg-black rounded w-64 h-6">
+                <div class="flex-1 bg-amber-500"></div>
+                <div class="flex-1 bg-amber-500"></div>
+                <div class="flex-1 bg-amber-500"></div>
+                <div class="flex-1 bg-amber-500 flex opacity-30 bg-neutral-800"></div>
+                <div class="flex-1 bg-neutral-800 opacity-20"></div>
+                <div class="flex-1 bg-neutral-800 opacity-20"></div>
+                <div class="flex-1 bg-neutral-800 opacity-20"></div>
+                <div class="flex-1 bg-neutral-800 opacity-20"></div>
+                <div class="flex-1 bg-neutral-800 opacity-20"></div>
+                <div class="flex-1 bg-neutral-800 opacity-20"></div>
             </div>
         </div>
     </section>
 
     <section class="mb-12">
-        <h2 class="text-2xl font-black text-center tracking-wider uppercase mb-8">NOTES DE MAJ</h2>
+        <div class="flex items-center justify-center gap-2 mb-8">
+            <div class="w-1 h-1 bg-amber-500 rounded-full"></div>
+            <h2 class="text-xs font-mono tracking-widest text-neutral-400 uppercase">NOTES DE MAJ</h2>
+            <div class="w-1 h-1 bg-amber-500 rounded-full"></div>
+        </div>
         
-        <div class="relative grid grid-cols-2 gap-8 px-2">
-            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white -translate-x-1/2 flex flex-col justify-between items-center py-2">
-                <div class="w-3 h-3 rounded-full bg-neutral-900 border-2 border-white"></div>
-                <div class="w-3 h-3 rounded-full bg-neutral-900 border-2 border-white"></div>
+        <div class="relative grid grid-cols-2 gap-6 px-1">
+            
+            <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-neutral-800 -translate-x-1/2 flex flex-col justify-between items-center py-2">
+                <div class="w-2 h-2 rounded-full bg-neutral-950 border border-neutral-500"></div>
+                <div class="w-2 h-2 rounded-full bg-neutral-950 border border-neutral-500"></div>
             </div>
 
             <div class="flex flex-col items-center text-center space-y-3">
-                <div class="w-36 h-36 rounded-2xl border-2 border-white overflow-hidden bg-neutral-800 shadow-lg">
+                <div class="w-36 h-36 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900 shadow-xl">
                     <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Arène 4" class="w-full h-full object-cover">
                 </div>
-                <p class="text-xs text-neutral-300 leading-relaxed font-medium">
+                <p class="text-xs text-neutral-400 leading-relaxed px-1">
                     Aujourd’hui j’ai avancé sur le design de l’arène numéro 4. Avec le système de...
                 </p>
-                <button class="text-[10px] text-neutral-500 font-bold hover:text-neutral-300 transition-colors">voir plus..</button>
+                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors">voir plus..</button>
             </div>
 
             <div class="flex flex-col items-center text-center space-y-3">
-                <div class="w-36 h-36 rounded-2xl border-2 border-white overflow-hidden bg-neutral-800 shadow-lg">
+                <div class="w-36 h-36 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900 shadow-xl">
                     <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400" alt="Tenues" class="w-full h-full object-cover">
                 </div>
-                <p class="text-xs text-neutral-300 leading-relaxed font-medium">
+                <p class="text-xs text-neutral-400 leading-relaxed px-1">
                     Aujourd’hui j’ai avancé sur le design des tenues du personnel.
                 </p>
-                <button class="text-[10px] text-neutral-500 font-bold hover:text-neutral-300 transition-colors">voir plus..</button>
+                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors">voir plus..</button>
             </div>
+
         </div>
     </section>
 
-    <div class="border-t border-b border-white h-1 mb-8"></div>
+    <div class="border-b border-neutral-900 mb-8"></div>
 
     <section class="text-center mb-12">
-        <h2 class="text-2xl font-black tracking-wider uppercase mb-6">PROCHAINE ÉTAPE :</h2>
-        <div class="w-full h-48 border-2 border-white rounded-lg overflow-hidden bg-neutral-800">
+        <h2 class="text-xs font-mono tracking-widest text-neutral-400 uppercase mb-4">PROCHAINE ÉTAPE</h2>
+        <div class="w-full h-44 border border-neutral-800 rounded-xl overflow-hidden bg-neutral-900 shadow-xl">
             <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600" alt="Prochaine étape" class="w-full h-full object-cover">
         </div>
     </section>
 
-    <div class="border-t border-neutral-600 w-full my-8"></div>
+    <div class="border-b border-neutral-900 mb-8"></div>
 
     <section class="space-y-4">
-        <h2 class="text-xl font-black tracking-wider uppercase text-neutral-400 mb-6 font-mono text-center md:text-left">// ÉVOLUTION DU PROTOCOLE</h2>
+        <div class="flex items-center gap-2 mb-4">
+            <div class="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
+            <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">// ÉVOLUTION GLOBALET</h2>
+        </div>
         
         <div class="space-y-3">
 
-            <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-lg flex justify-between items-center group hover:border-neutral-700 transition-colors">
-                <div class="space-y-1">
-                    <span class="text-[10px] font-mono uppercase text-neutral-500">Étape 01</span>
-                    <h3 class="text-sm font-bold text-neutral-200 tracking-wide uppercase">DÉFINITION DU HIGH-CONCEPT</h3>
+            <div class="bg-neutral-900/40 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden group hover:border-neutral-700 transition-colors">
+                <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
+                <div class="space-y-0.5 pl-2">
+                    <span class="text-[9px] font-mono uppercase text-neutral-500">Étape 01</span>
+                    <h3 class="text-xs font-bold text-neutral-200 tracking-wide uppercase font-mono">HIGH-CONCEPT GENERAL</h3>
                 </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 bg-emerald-950/80 text-emerald-400 border border-emerald-900 rounded-md shadow-sm">VALIDÉ</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 bg-emerald-950/40 text-emerald-400 border border-emerald-900/60 rounded">Validé</span>
             </div>
-            <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-lg flex justify-between items-center group hover:border-neutral-700 transition-colors">
-                <div class="space-y-1">
-                    <span class="text-[10px] font-mono uppercase text-neutral-500">Étape 02</span>
-                    <h3 class="text-sm font-bold text-neutral-200 tracking-wide uppercase">LEVEL DESIGN : PLANS DU LOBBY</h3>
+
+
+            <div class="bg-neutral-900/40 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden group hover:border-neutral-700 transition-colors">
+                <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
+                <div class="space-y-0.5 pl-2">
+                    <span class="text-[9px] font-mono uppercase text-neutral-500">Étape 02</span>
+                    <h3 class="text-xs font-bold text-neutral-200 tracking-wide uppercase font-mono">LEVEL DESIGN : LOBBY</h3>
                 </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 bg-amber-950/80 text-amber-400 border border-amber-900 rounded-md shadow-sm">EN COURS</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 bg-amber-950/40 text-amber-400 border border-amber-900/60 rounded">En cours..</span>
             </div>
-            <div class="bg-neutral-900/50 border border-neutral-800 p-4 rounded-lg flex justify-between items-center group hover:border-neutral-700 transition-colors opacity-60">
-                <div class="space-y-1">
-                    <span class="text-[10px] font-mono uppercase text-neutral-500">Étape 03</span>
-                    <h3 class="text-sm font-bold text-neutral-400 tracking-wide uppercase">CONCEPTION DU DECK DE CARTES</h3>
+
+
+            <div class="bg-neutral-900/20 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden group hover:border-neutral-700 transition-colors opacity-40">
+                <div class="absolute top-0 left-0 w-1 h-full bg-neutral-700"></div>
+                <div class="space-y-0.5 pl-2">
+                    <span class="text-[9px] font-mono uppercase text-neutral-500">Étape 03</span>
+                    <h3 class="text-xs font-bold text-neutral-400 tracking-wide uppercase font-mono">DESIGN DES BADGES D'ACCÈS</h3>
                 </div>
-                <span class="text-[10px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded-md">EN ATTENTE</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded">En attente</span>
             </div>
-            </div>
+
+        </div>
     </section>
 
     <footer class="mt-16 py-4 text-center font-mono text-[9px] text-neutral-600 tracking-widest uppercase">
-        VERTEX PROTOCOL — TOUS DROITS RÉSERVÉS — 2026
+        PROJET VERTEX — TOUS DROITS RESERVÉS — 2026
     </footer>
 
 </body>
