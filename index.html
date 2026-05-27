@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJET : VERTEX</title>
+    <!-- Tailwind CSS pour le style -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        /* Couleur de fond identique à tes captures d'écran (anthracite très sombre) */
         body {
             background-color: #0a0a0a;
         }
@@ -14,24 +14,28 @@
 </head>
 <body class="text-neutral-200 font-sans antialiased max-w-md mx-auto px-5 py-8 selection:bg-amber-500 selection:text-black">
 
+    <!-- HEADER ENCADRÉ -->
     <header class="border border-neutral-800 p-5 text-center mb-8 bg-neutral-900/30 rounded-xl">
         <span class="text-[10px] font-mono tracking-widest text-amber-500 uppercase">v1.0 — PROTOCOLE</span>
         <h1 class="text-2xl font-black tracking-tight uppercase text-neutral-100 mt-1">PROJET : VERTEX</h1>
     </header>
 
+    <!-- LIGNE DE SÉPARATION SUBTILE -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
+    <!-- SECTION AVANCÉE DU PROJET -->
     <section class="text-center mb-12 bg-neutral-900/20 border border-neutral-900 p-4 rounded-xl">
         <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400 mb-3">Avancée du projet</h2>
         
         <div class="flex items-center justify-center gap-3">
-            <span class="text-sm font-mono font-bold text-amber-500">5%</span>
+            <span class="text-sm font-mono font-bold text-amber-500">15%</span>
             
+            <!-- Barre de chargement par blocs -->
             <div class="flex border border-amber-500/30 p-0.5 gap-0.5 bg-black rounded w-64 h-6">
                 <div class="flex-1 bg-amber-500"></div>
-                 <div class="flex-1 bg-amber-500 flex opacity-30 bg-neutral-800"></div>
-                <div class="flex-1 bg-neutral-800 opacity-20"></div>
-                <div class="flex-1 bg-neutral-800 opacity-20"></div>
+                <div class="flex-1 bg-amber-500"></div>
+                <div class="flex-1 bg-amber-500"></div>
+                <div class="flex-1 bg-amber-500 flex opacity-30 bg-neutral-800"></div>
                 <div class="flex-1 bg-neutral-800 opacity-20"></div>
                 <div class="flex-1 bg-neutral-800 opacity-20"></div>
                 <div class="flex-1 bg-neutral-800 opacity-20"></div>
@@ -42,6 +46,7 @@
         </div>
     </section>
 
+    <!-- SECTION NOTES DE MAJ -->
     <section class="mb-12">
         <div class="flex items-center justify-center gap-2 mb-8">
             <div class="w-1 h-1 bg-amber-500 rounded-full"></div>
@@ -49,13 +54,14 @@
             <div class="w-1 h-1 bg-amber-500 rounded-full"></div>
         </div>
         
+        <!-- Conteneur de la Timeline -->
         <div class="relative grid grid-cols-2 gap-6 px-1">
-            
             <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-neutral-800 -translate-x-1/2 flex flex-col justify-between items-center py-2">
                 <div class="w-2 h-2 rounded-full bg-neutral-950 border border-neutral-500"></div>
                 <div class="w-2 h-2 rounded-full bg-neutral-950 border border-neutral-500"></div>
             </div>
 
+            <!-- Colonne Gauche -->
             <div class="flex flex-col items-center text-center space-y-3">
                 <div class="w-36 h-36 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900 shadow-xl">
                     <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400" alt="Arène 4" class="w-full h-full object-cover">
@@ -66,21 +72,23 @@
                 <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors">voir plus..</button>
             </div>
 
+            <!-- Colonne Droite -->
             <div class="flex flex-col items-center text-center space-y-3">
                 <div class="w-36 h-36 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900 shadow-xl">
-                    <img src="https://images.pexels.com/photos/7660829/pexels-photo-7660829.jpeg" alt="Tenues" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=400" alt="Tenues" class="w-full h-full object-cover">
                 </div>
                 <p class="text-xs text-neutral-400 leading-relaxed px-1">
                     Aujourd’hui j’ai avancé sur le design des tenues du personnel.
                 </p>
                 <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors">voir plus..</button>
             </div>
-
         </div>
     </section>
 
+    <!-- LIGNE DE SÉPARATION SUBTILE -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
+    <!-- SECTION PROCHAINE ÉTAPE -->
     <section class="text-center mb-12">
         <h2 class="text-xs font-mono tracking-widest text-neutral-400 uppercase mb-4">PROCHAINE ÉTAPE</h2>
         <div class="w-full h-44 border border-neutral-800 rounded-xl overflow-hidden bg-neutral-900 shadow-xl">
@@ -88,37 +96,39 @@
         </div>
     </section>
 
+    <!-- LIGNE DE SÉPARATION -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
-    <section class="space-y-4">
+    <!-- SECTION : LISTE GLOBALE DES ÉTAPES -->
+    <section class="space-y-4 mb-16">
         <div class="flex items-center gap-2 mb-4">
             <div class="w-1.5 h-1.5 bg-amber-500 rounded-full"></div>
-            <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">// ÉVOLUTION GLOBALE</h2>
+            <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400">// ÉVOLUTION DU PROTOCOLE</h2>
         </div>
         
         <div class="space-y-3">
-
-            <div class="bg-neutral-900/40 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden group hover:border-neutral-700 transition-colors">
+            <!-- ÉTAPE 01 -->
+            <div class="bg-neutral-900/40 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1 h-full bg-emerald-500"></div>
                 <div class="space-y-0.5 pl-2">
                     <span class="text-[9px] font-mono uppercase text-neutral-500">Étape 01</span>
-                    <h3 class="text-xs font-bold text-neutral-200 tracking-wide uppercase font-mono">LANCEMENT RÉSEAUX</h3>
+                    <h3 class="text-xs font-bold text-neutral-200 tracking-wide uppercase font-mono">HIGH-CONCEPT GENERAL</h3>
                 </div>
                 <span class="text-[9px] font-mono px-2 py-0.5 bg-emerald-950/40 text-emerald-400 border border-emerald-900/60 rounded">Validé</span>
             </div>
 
-
-            <div class="bg-neutral-900/40 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden group hover:border-neutral-700 transition-colors">
+            <!-- ÉTAPE 02 -->
+            <div class="bg-neutral-900/40 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-1 h-full bg-amber-500"></div>
                 <div class="space-y-0.5 pl-2">
                     <span class="text-[9px] font-mono uppercase text-neutral-500">Étape 02</span>
-                    <h3 class="text-xs font-bold text-neutral-200 tracking-wide uppercase font-mono">VISUELS DU CONCEPT</h3>
+                    <h3 class="text-xs font-bold text-neutral-200 tracking-wide uppercase font-mono">LEVEL DESIGN : LOBBY</h3>
                 </div>
-                <span class="text-[9px] font-mono px-2 py-0.5 bg-amber-950/40 text-amber-400 border border-amber-900/60 rounded">En cours..</span>
+                <span class="text-[9px] font-mono px-2 py-0.5 bg-amber-950/40 text-amber-400 border border-amber-900/60 rounded">Sur l'établi</span>
             </div>
 
-
-            <div class="bg-neutral-900/20 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden group hover:border-neutral-700 transition-colors opacity-40">
+            <!-- ÉTAPE 03 -->
+            <div class="bg-neutral-900/20 border border-neutral-800 p-4 rounded-lg flex justify-between items-center relative overflow-hidden opacity-40">
                 <div class="absolute top-0 left-0 w-1 h-full bg-neutral-700"></div>
                 <div class="space-y-0.5 pl-2">
                     <span class="text-[9px] font-mono uppercase text-neutral-500">Étape 03</span>
@@ -126,12 +136,152 @@
                 </div>
                 <span class="text-[9px] font-mono px-2 py-0.5 bg-neutral-800 text-neutral-400 border border-neutral-700 rounded">En attente</span>
             </div>
+        </div>
+    </section>
+
+    <!-- LIGNE DE SÉPARATION -->
+    <div class="border-b border-neutral-900 mb-8"></div>
+
+    <!-- ======================================================== -->
+    <!-- 1. MASTER-PLAN DE PRODUCTION (2026 → 2029) -->
+    <!-- ======================================================== -->
+    <section class="space-y-8 mb-16">
+        <div class="text-center md:text-left">
+            <h2 class="text-lg font-black tracking-wider uppercase text-neutral-100">1. MASTER-PLAN DE PRODUCTION</h2>
+            <p class="text-[10px] font-mono text-amber-500 uppercase tracking-widest mt-0.5">Horizon 2026 — 2029</p>
+        </div>
+
+        <div class="space-y-6">
+            
+            <!-- PHASE 0 -->
+            <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3">
+                <div class="border-b border-neutral-800 pb-2">
+                    <h3 class="text-xs font-mono font-bold text-amber-500">PHASE 0 — Pré-production conceptuelle (2026)</h3>
+                    <p class="text-[10px] text-neutral-400 mt-0.5">Objectif : Verrouiller la vision et la cohérence interne du système.</p>
+                </div>
+                <ul class="space-y-2 text-xs font-mono">
+                    <li class="flex items-start gap-2 text-neutral-300"><span class="text-emerald-500 font-bold">✔</span> Début documentation publique (Insta/TikTok)</li>
+                    <li class="flex items-start gap-2 text-neutral-300"><span class="text-emerald-500 font-bold">✔</span> Définition du Lore central et des sous-univers</li>
+                    <li class="flex items-start gap-2 text-neutral-300"><span class="text-emerald-500 font-bold">✔</span> Définition visuelle (style, matériaux, codes graphiques)</li>
+                    <li class="flex items-start gap-2 text-neutral-300"><span class="text-emerald-500 font-bold">✔</span> Création des premières illustrations physiques (“paper first”)</li>
+                    <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Définition des systèmes de jeu (XP, monnaie, factions)</li>
+                    <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Délimitation du scope (taille, expériences jouables)</li>
+                    <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Étude économique : modèles potentiels (bar, club privé)</li>
+                    <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Benchmark mondial (expériences IRL / game design)</li>
+                </ul>
+            </div>
+
+            <!-- PHASE 1 -->
+            <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-80">
+                <div class="border-b border-neutral-800 pb-2">
+                    <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 1 — Prototype narratif & gameplay (fin 2026)</h3>
+                    <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Obtenir un proof of fun et un proof of style.</p>
+                </div>
+                <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Tests IRL simples : quêtes, interactions PNJ, mécaniques</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Création des premières cartes du lieu + zoning</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Production d’un “vertical slice” : 1 zone jouable complète</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Création du premier trailer conceptuel (papier + 2D)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Tests contrôlés avec une micro-communauté (20–50 membres)</li>
+                </ul>
+            </div>
+
+            <!-- PHASE 2 -->
+            <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-60">
+                <div class="border-b border-neutral-800 pb-2">
+                    <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 2 — Pré-production structurelle (2027)</h3>
+                    <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Passer du concept à la faisabilité immobilière et technique.</p>
+                </div>
+                <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Recherche active de partenaires / investisseurs</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Étude architecturale préliminaire complète</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Choix des matériaux réels (bois, béton, marbre, lumière)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Budgétisation (construction, scénographie, costumes, staff)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Création du “Game Bible VERTEX” (référence absolue)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Développement précis du système économique interne</li>
+                </ul>
+            </div>
+
+            <!-- PHASE 3 -->
+            <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-50">
+                <div class="border-b border-neutral-800 pb-2">
+                    <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 3 — Production lourde (2028)</h3>
+                    <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Construire le lieu et produire l’expérience totale.</p>
+                </div>
+                <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Gros travaux + déploiement de la scénographie</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Fabrication artisanale des accessoires, costumes et props</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Formation du staff PNJ (jeu d’acteur, rituels, protocoles)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Intégration des systèmes d’éclairage, de son et d’ambiance</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Écriture des quêtes, événements saisonniers et factions</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Lancement du Beta test interne + public restreint</li>
+                </ul>
+            </div>
+
+            <!-- PHASE 4 -->
+            <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-40">
+                <div class="border-b border-neutral-800 pb-2">
+                    <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 4 — Lancement (2029)</h3>
+                    <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Ouverture et stabilisation de l'infrastructure.</p>
+                </div>
+                <ul class="space-y-2 text-xs font-mono text-neutral-500">
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Soft opening (phase de test de 3 mois)</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span> Ajustements et équilibrages en live</li>
+                    <li class="flex items-start gap-2 text-amber-500/60 font-bold"><span class="text-neutral-700">✖</span> Lancement officiel avant le ★ 8 décembre 2029</li>
+                </ul>
+            </div>
 
         </div>
     </section>
 
-    <footer class="mt-16 py-4 text-center font-mono text-[9px] text-neutral-600 tracking-widest uppercase">
-        PROJET VERTEX — TOUS DROITS RESERVÉS — 2026
+    <!-- LIGNE DE SÉPARATION -->
+    <div class="border-b border-neutral-900 mb-8"></div>
+
+    <!-- ======================================================== -->
+    <!-- 2. ROADMAP CHRONOLOGIQUE (2026 → 2029) -->
+    <!-- ======================================================== -->
+    <section class="space-y-6">
+        <div class="text-center md:text-left">
+            <h2 class="text-lg font-black tracking-wider uppercase text-neutral-100">2. ROADMAP CHRONOLOGIQUE</h2>
+            <p class="text-[10px] font-mono text-amber-500 uppercase tracking-widest mt-0.5">Ligne temporelle du protocole</p>
+        </div>
+
+        <div class="space-y-4 font-mono text-xs">
+            
+            <!-- ANNEE 2026 -->
+            <div class="bg-neutral-900/30 border border-neutral-800 p-4 rounded-xl relative pl-6">
+                <div class="absolute left-2.5 top-5 w-1 h-1 bg-amber-500 rounded-full"></div>
+                <h3 class="text-sm font-bold text-neutral-200 mb-2 border-b border-neutral-900 pb-1">ANNEE 2026</h3>
+                <p class="text-neutral-400 leading-relaxed">Formalisation du concept complet (Lore, piliers narratifs, univers). Création du Brand Codex de la marque. Production intensive des illustrations et concept-arts au format papier traditionnel. Structuration et lancement de la documentation publique (Instagram/TikTok). Conception des premiers assets physiques et des mécaniques basiques de jeu IRL. Début du prototypage de gameplay (mini-scènes et quêtes tests). Objectif de croissance : construction de la micro-communauté (cap des 1000+ abonnés ciblés). Validation de la première zone jouable (vertical slice) et création du storyboard pour le pitch deck technique. Prise de contacts initiaux discrets pour la recherche de partenaires.</p>
+            </div>
+
+            <!-- ANNEE 2027 -->
+            <div class="bg-neutral-900/10 border border-neutral-800 p-4 rounded-xl relative pl-6 opacity-80">
+                <div class="absolute left-2.5 top-5 w-1 h-1 bg-neutral-600 rounded-full"></div>
+                <h3 class="text-sm font-bold text-neutral-400 mb-2 border-b border-neutral-900 pb-1">ANNEE 2027</h3>
+                <p class="text-neutral-500 leading-relaxed">Lancement de l'étude architecturale préliminaire et fabrication des premières maquettes volumétriques en 3D. Structuration et validation du business model final calibré sur un format "hôtelier hybride". Finalisation complète et gel du document de référence absolu : le Game Bible VERTEX. Début des démarches officielles d'envergure auprès des investisseurs, des mairies et des acteurs fonciers.</p>
+            </div>
+
+            <!-- ANNEE 2028 -->
+            <div class="bg-neutral-900/10 border border-neutral-800 p-4 rounded-xl relative pl-6 opacity-60">
+                <div class="absolute left-2.5 top-5 w-1 h-1 bg-neutral-700 rounded-full"></div>
+                <h3 class="text-sm font-bold text-neutral-400 mb-2 border-b border-neutral-900 pb-1">ANNEE 2028</h3>
+                <p class="text-neutral-500 leading-relaxed">Sélection et validation juridique du site immobilier définitif pour le projet. Dépôt de l'ensemble des dossiers administratifs nécessaires. Lancement officiel de la fabrication des éléments de décors, des costumes sur mesure et de la gestion des systèmes de lumières scénographiques. Extension de l'expérience de jeu (conception de 5 à 10 zones interactives distinctes). Lancement du chantier lourd et de l'installation des décors. Casting, recrutement et formation intensive des acteurs PNJ. Programmation et interconnexion complète des systèmes physiques de jeu. Préparation globale de la stratégie marketing de lancement et ouverture du Beta test pour le public ciblé.</p>
+            </div>
+
+            <!-- ANNEE 2029 -->
+            <div class="bg-neutral-900/10 border border-neutral-800 p-4 rounded-xl relative pl-6 opacity-40">
+                <div class="absolute left-2.5 top-5 w-1 h-1 bg-neutral-700 rounded-full"></div>
+                <h3 class="text-sm font-bold text-neutral-400 mb-2 border-b border-neutral-900 pb-1">ANNEE 2029</h3>
+                <p class="text-neutral-500 leading-relaxed">Phase de Soft Opening (ouverture restreinte) pour éprouver les mécaniques de l'hôtel-jeu en conditions réelles de stress-test. Application des corrections ergonomiques, logistiques et narratives de dernière minute sur le terrain. Grand Opening officiel et inauguration définitive du VERTEX HQ.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER TYPE COPIE CONFORME -->
+    <footer class="mt-20 py-4 text-center font-mono text-[9px] text-neutral-600 tracking-widest uppercase border-t border-neutral-950">
+        PROJET VERTEX — DOCUMENT DE PRODUCTION PUBLIC — NE PAS DIVULGUER SANS PROTOCOLE
     </footer>
 
 </body>
