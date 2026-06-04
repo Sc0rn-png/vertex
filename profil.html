@@ -1,1 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VERTEX // PROTOCOLE_PROFIL</title>
+    <style>
+        /* CHARTE GRAPHIQUE VERTEX (Inspirée du Journal de Bord) */
+        :root {
+            --bg-color: #050505;
+            --panel-bg: #0b0b0d;
+            --panel-border: #141417;
+            --accent-orange: #ff6b00;
+            --text-bright: #ffffff;
+            --text-muted: #7d7d83;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-family);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-bright);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 15px;
+        }
+
+        /* SIMULATION ÉCRAN TÉLÉPHONE */
+        .phone-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+        }
+
+        /* TITRE PROTOCOLE */
+        .header-box {
+            border: 1px solid var(--panel-border);
+            background-color: rgba(20, 20, 23, 0.4);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header-box .sub {
+            font-size: 0.65rem;
+            color: var(--accent-orange);
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .header-box h1 {
+            font-size: 1.3rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        /* SECTIONS */
+        .section-title {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .info-group {
+            margin-bottom: 25px;
+        }
+
+        .meta-line {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 25px;
+        }
+
+        /* GRANDE VALEUR (CRÉDITS) */
+        .solde-box {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .solde-box .amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-bright);
+        }
+
+        .solde-box .label {
+            font-size: 0.65rem;
+            color: var(--accent-orange);
+            letter-spacing: 2px;
+            margin-top: 2px;
+            font-weight: bold;
+        }
+
+        /* BARRE DE PROGRESSION AVANCÉE STYLE JOURNAL DE BORD */
+        .progress-container {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--panel-border);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .bar-bg {
+            background-color: #141417;
+            height: 14px;
+            border-radius: 2px;
+            padding: 2px;
+            display: flex;
+        }
+
+        .bar-fill {
+            background-color: var(--accent-orange);
+            width: 82%; /* 82% */
+            height: 100%;
+            border-radius: 1px;
+        }
+
+        /* GRILLE DE STATS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .stat-card {
+            background-color: rgba(20, 20, 23, 0.3);
+            border: 1px solid var(--panel-border);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-card .label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .stat-card .value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* BOUTON DE NAVIGATION VERTEX */
+        .nav-button {
+            display: block;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid var(--accent-orange);
+            color: var(--accent-orange);
+            padding: 14px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .nav-button:hover {
+            background-color: var(--accent-orange);
+            color: var(--bg-color);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        
+        <div class="header-box">
+            <div class="sub">Opérateur VERTEX</div>
+            <h1>N°0825</h1>
+        </div>
+
+        <div class="meta-line">
+            Opérationnel depuis : 01.06.2026
+        </div>
+
+        <div class="solde-box">
+            <div class="amount">56.402</div>
+            <div class="label">Crédits Actuels</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span style="color: var(--text-muted);">RÉPUTATION</span>
+                <span>82% <span style="color: var(--accent-orange);">HONORÉ</span></span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"></div>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div class="section-title">• Performances •</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Classement</div>
+                    <div class="value">6<span style="color: var(--text-muted); font-size: 0.8rem;"> /852</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Éliminations</div>
+                    <div class="value" style="color: var(--accent-orange);">46</div>
+                </div>
+                <div class="stat-card" style="grid-column: span 2;">
+                    <div class="label">Boss Éliminés</div>
+                    <div class="value">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div class="section-title">• Capacité Stockage •</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Items Stockés</div>
+                    <div class="value">2<span style="color: var(--text-muted); font-size: 0.8rem;"> /6</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Légendaires</div>
+                    <div class="value">0<span style="color: var(--text-muted); font-size: 0.8rem;"> /2</span></div>
+                </div>
+            </div>
+        </div>
+
+        <a href="inventaire.html" class="nav-button">Accéder au Coffre Virtuel ➔</a>
+
+    </div>
+
+</body>
+</html>
