@@ -7,6 +7,30 @@
     <!-- Tailwind CSS pour le style -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+        /* BOUTON DE NAVIGATION */
+.nav-btn {
+    display: block;
+    width: 100%;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    color: #12161f;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    margin-top: 20px;
+}
+
+.nav-btn:hover {
+    background-color: transparent;
+    color: var(--accent-color);
+    cursor: pointer;
+}
         body {
             background-color: #0a0a0a;
         }
@@ -67,9 +91,9 @@
                     <img src="images/res.png" alt="Arène 4" class="w-full h-full object-cover">
                 </div>
                 <p class="text-xs text-neutral-400 leading-relaxed px-1">
-                    Cette semaine j'ai commencé la documentation du projet sur les réseaux...
+                    Cette semaine j'ai commencé la documentation du projet sur les réseaux.
                 </p>
-                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors">voir plus..</button>
+                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors"></button>
             </div>
 
             <!-- Colonne Droite -->
@@ -78,9 +102,9 @@
                     <img src="images/room (1).png" alt="Tenues" class="w-full h-full object-cover">
                 </div>
                 <p class="text-xs text-neutral-400 leading-relaxed px-1">
-                    Je vais maintenant commencer la définition du Lore central et des sous-univers...
+                    Je vais maintenant commencer la définition du Lore central et des sous-univers.
                 </p>
-                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors">voir plus..</button>
+                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors"></button>
             </div>
         </div>
     </section>
@@ -99,6 +123,13 @@
     <!-- LIGNE DE SÉPARATION -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
+    <div class="section" style="margin-bottom: 10px;">
+            <div class="section-title">Inventaire Virtuel</div>
+            </div>
+
+        <a href="inventaire.html" class="nav-btn">Ouvrir le Coffre ➡</a>
+
+    </div> </body>
     <!-- ======================================================== -->
     <!-- 1. MASTER-PLAN DE PRODUCTION (2026 → 2029) -->
     <!-- ======================================================== -->
