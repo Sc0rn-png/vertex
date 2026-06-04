@@ -39,41 +39,48 @@
 /* STYLISATION DU BLOC DE REDIRECTION (JOURNAL) */
 .app-redirect-section {
     width: 100%;
-    max-width: 760px; /* Aligné sur la largeur de tes blocs d'images */
-    margin: 40px auto; /* Centre le bloc entier et crée de l'espace haut/bas */
-    text-align: center; /* Centre tous los textes à l'intérieur */
-    padding: 20px 0;
-    border-top: 1px solid #141417; /* Ligne de séparation subtile en haut (optionnel) */
-    border-bottom: 1px solid #141417; /* Ligne de séparation subtile en bas (optionnel) */
+    max-width: 760px; /* Aligné sur la largeur de ton bloc Prochaine Étape */
+    margin: 50px auto; /* Centre le bloc et gère l'espace haut/bas */
+    text-align: center; /* Centre le sous-titre et le bouton */
 }
 
 .app-subtitle {
     font-size: 0.75rem;
-    color: #55555a; /* Même gris mat que tes autres labels */
+    color: #55555a; /* Gris mat identique à tes autres labels */
     letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 600;
 }
 
-.app-main-btn {
-    display: inline-block; /* Permet de centrer l'élément comme du texte tout en gérant les paddings */
-    color: #ffffff; /* Blanc pur */
+/* LE VRAI BOUTON ENCADRÉ */
+.app-container-btn {
+    display: inline-block;
+    min-width: 250px; /* Donne une belle largeur minimale au bouton */
+    background-color: rgba(255, 184, 0, 0.01); /* Fond presque noir */
+    border: 1px solid rgba(255, 184, 0, 0.25); /* Bordure fine Or/Jaune atténuée */
+    color: #ffffff; /* Texte blanc pur */
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    padding: 16px 30px;
+    
+    /* Découpe asymétrique style "Protocole / Tech" */
+    clip-path: polygon(0 0, 95% 0, 100% 30%, 100% 100%, 5% 100%, 0 70%);
+    
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* EFFET DISCRET AU SURVOL */
-.app-main-btn:hover {
-    color: #ffb800; /* Passe en Jaune/Or au survol */
-    letter-spacing: 4px; /* Léger écartement des lettres */
+/* ACTION AU SURVOL */
+.app-container-btn:hover {
+    background-color: rgba(255, 184, 0, 0.08); /* Le fond se colore légèrement */
+    border-color: #ffb800; /* La bordure s'illumine en Jaune/Or */
+    color: #ffb800; /* Le texte passe en Jaune/Or */
+    letter-spacing: 4px; /* Micro-animation d'écartement des lettres */
     cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 184, 0, 0.15); /* Effet de lueur discret */
 }
 </style>
 </head>
