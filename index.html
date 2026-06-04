@@ -36,6 +36,45 @@
     background-color: transparent;
     cursor: pointer;
 }
+/* STYLISATION DU BLOC DE REDIRECTION (JOURNAL) */
+.app-redirect-section {
+    width: 100%;
+    max-width: 760px; /* Aligné sur la largeur de tes blocs d'images */
+    margin: 40px auto; /* Centre le bloc entier et crée de l'espace haut/bas */
+    text-align: center; /* Centre tous los textes à l'intérieur */
+    padding: 20px 0;
+    border-top: 1px solid #141417; /* Ligne de séparation subtile en haut (optionnel) */
+    border-bottom: 1px solid #141417; /* Ligne de séparation subtile en bas (optionnel) */
+}
+
+.app-subtitle {
+    font-size: 0.75rem;
+    color: #55555a; /* Même gris mat que tes autres labels */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.app-main-btn {
+    display: inline-block; /* Permet de centrer l'élément comme du texte tout en gérant les paddings */
+    color: #ffffff; /* Blanc pur */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* EFFET DISCRET AU SURVOL */
+.app-main-btn:hover {
+    color: #ffb800; /* Passe en Jaune/Or au survol */
+    letter-spacing: 4px; /* Léger écartement des lettres */
+    cursor: pointer;
+}
 </style>
 </head>
 <body class="text-neutral-200 font-sans antialiased max-w-md mx-auto px-5 py-8 selection:bg-amber-500 selection:text-black">
@@ -125,9 +164,11 @@
     <!-- LIGNE DE SÉPARATION -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
-    <h2 class="text-xs font-mono tracking-widest text-neutral-400 uppercase mb-4">DÉCOUVRER LE PROFIL OPÉRATEUR</h2>
-        <a href="profil.html" class="nav-btn">VOIR MON PROFIL</a>
-            </div>
+    <!-- BLOC INTERMÉDIAIRE : ACCÈS APP -->
+<div class="app-redirect-section">
+    <p class="app-subtitle">DÉCOUVRIR LE PROFIL OPÉRATEUR</p>
+    <a href="profil.html" class="app-main-btn">VOIR MON PROFIL</a>
+</div>
     
      <div class="border-b border-neutral-900 mb-8"></div>
 
