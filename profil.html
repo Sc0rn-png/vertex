@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VERTEX // PROTOCOLE_PROFIL</title>
     <style>
-        /* CHARTE GRAPHIQUE VERTEX (Inspirée du Journal de Bord) */
+        /* HIÉRARCHIE DES COULEURS ÉPURÉE */
         :root {
             --bg-color: #050505;
             --panel-bg: #0b0b0d;
             --panel-border: #141417;
-            --accent-orange: #FFC107;
-            --text-bright: #ffffff;
-            --text-muted: #FFC107;
+            
+            /* Ta couleur accentuation principale */
+            --accent-gold: #ffb800; 
+            
+            /* Couleurs de texte pour l'équilibre visuel */
+            --text-bright: #ffffff;      /* Pour les chiffres principaux et grands titres */
+            --text-normal: #e0e0e6;      /* Pour le texte standard */
+            --text-muted: #55555a;       /* Pour TOUS les petits labels secondaires */
             --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -25,7 +30,7 @@
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-bright);
+            color: var(--text-normal);
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -33,7 +38,6 @@
             padding: 15px;
         }
 
-        /* SIMULATION ÉCRAN TÉLÉPHONE */
         .phone-container {
             width: 100%;
             max-width: 400px;
@@ -44,19 +48,19 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.8);
         }
 
-        /* TITRE PROTOCOLE */
+        /* ENTÊTE ID */
         .header-box {
             border: 1px solid var(--panel-border);
             background-color: rgba(20, 20, 23, 0.4);
             padding: 15px;
             border-radius: 8px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .header-box .sub {
             font-size: 0.65rem;
-            color: var(--accent-orange);
+            color: var(--text-muted); /* Passé en gris pour calmer le jeu */
             letter-spacing: 3px;
             font-weight: bold;
             margin-bottom: 4px;
@@ -64,15 +68,90 @@
         }
 
         .header-box h1 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 900;
             letter-spacing: 2px;
+            color: var(--text-bright);
         }
 
-        /* SECTIONS */
-        .section-title {
+        .meta-line {
+            font-size: 0.75rem;
+            color: var(--text-muted); /* Passé en gris */
+            text-align: center;
+            margin-top: -15px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        /* GRANDE VALEUR (CRÉDITS) */
+        .solde-box {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .solde-box .amount {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-bright); /* Blanc pur pour l'importance */
+        }
+
+        .solde-box .label {
+            font-size: 0.65rem;
+            color: var(--accent-gold); /* Rappel de la monnaie */
+            letter-spacing: 2px;
+            margin-top: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* BARRE DE PROGRESSION */
+        .progress-container {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--panel-border);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
             font-size: 0.7rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .progress-label .title {
             color: var(--text-muted);
+        }
+
+        .progress-label .value {
+            color: var(--text-bright);
+        }
+
+        .progress-label .value span {
+            color: var(--accent-gold); /* Seul le mot HONORÉ reste en couleur */
+        }
+
+        .bar-bg {
+            background-color: #141417;
+            height: 10px;
+            border-radius: 2px;
+            padding: 2px;
+        }
+
+        .bar-fill {
+            background-color: var(--accent-gold);
+            width: 82%;
+            height: 100%;
+            border-radius: 1px;
+        }
+
+        /* SECTIONS ET GRILLES */
+        .section-title {
+            font-size: 0.65rem;
+            color: var(--text-muted); /* Les titres de catégories passent en gris */
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 12px;
@@ -84,118 +163,74 @@
             margin-bottom: 25px;
         }
 
-        .meta-line {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin-top: -15px;
-            margin-bottom: 25px;
-        }
-
-        /* GRANDE VALEUR (CRÉDITS) */
-        .solde-box {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .solde-box .amount {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: var(--text-bright);
-        }
-
-        .solde-box .label {
-            font-size: 0.65rem;
-            color: var(--accent-orange);
-            letter-spacing: 2px;
-            margin-top: 2px;
-            font-weight: bold;
-        }
-
-        /* BARRE DE PROGRESSION AVANCÉE STYLE JOURNAL DE BORD */
-        .progress-container {
-            background-color: rgba(0, 0, 0, 0.5);
-            border: 1px solid var(--panel-border);
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 25px;
-        }
-
-        .progress-label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.75rem;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .bar-bg {
-            background-color: #141417;
-            height: 14px;
-            border-radius: 2px;
-            padding: 2px;
-            display: flex;
-        }
-
-        .bar-fill {
-            background-color: var(--accent-orange);
-            width: 82%; /* 82% */
-            height: 100%;
-            border-radius: 1px;
-        }
-
-        /* GRILLE DE STATS */
         .stats-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-            margin-bottom: 25px;
         }
 
         .stat-card {
-            background-color: rgba(20, 20, 23, 0.3);
+            background-color: rgba(20, 20, 23, 0.2);
             border: 1px solid var(--panel-border);
-            padding: 12px;
+            padding: 14px 10px;
             border-radius: 6px;
             text-align: center;
         }
 
         .stat-card .label {
             font-size: 0.65rem;
-            color: var(--text-muted);
+            color: var(--text-muted); /* Labels en gris discret */
             text-transform: uppercase;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             letter-spacing: 1px;
+            font-weight: 600;
         }
 
+        /* CONFIGURATION DES CHIFFRES */
         .stat-card .value {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: bold;
+            color: var(--text-bright); /* Par défaut en blanc */
         }
 
-        /* BOUTON DE NAVIGATION VERTEX */
-        .nav-button {
+        .stat-card .value span {
+            color: var(--text-muted); /* Les "/852" ou "/6" passent en gris */
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+
+        /* Juste le chiffre des éliminations qui profite de la couleur */
+        .stat-card .value.highlight {
+            color: var(--accent-gold); 
+        }
+
+        /* BOUTON TACTIQUE RE-STYLISE */
+        .nav-btn {
             display: block;
             width: 100%;
-            background-color: transparent;
-            border: 1px solid var(--accent-orange);
-            color: var(--accent-orange);
+            background-color: rgba(255, 184, 0, 0.02);
+            border: 1px solid rgba(255, 184, 0, 0.3);
+            color: var(--text-bright);
             padding: 14px;
             text-align: center;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            margin-top: 10px;
+            border-radius: 4px;
+            clip-path: polygon(0 0, 96% 0, 100% 30%, 100% 100%, 4% 100%, 0 70%);
+            transition: all 0.3s ease;
+            margin-top: 15px;
         }
 
-        .nav-button:hover {
-            background-color: var(--accent-orange);
-            color: var(--bg-color);
+        .nav-btn:hover {
+            background-color: rgba(255, 184, 0, 0.08);
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            letter-spacing: 4px;
             cursor: pointer;
+            box-shadow: 0 0 15px rgba(255, 184, 0, 0.15);
         }
     </style>
 </head>
@@ -203,6 +238,7 @@
 
     <div class="phone-container">
         
+        <!-- ENTÊTE ID -->
         <div class="header-box">
             <div class="sub">Opérateur VERTEX</div>
             <h1>N°0825</h1>
@@ -212,31 +248,34 @@
             M.E.S : 01.06.2026
         </div>
 
+        <!-- SOLDE -->
         <div class="solde-box">
             <div class="amount">56.402$</div>
             <div class="label">Crédits Actuels</div>
         </div>
 
+        <!-- RÉPUTATION -->
         <div class="progress-container">
             <div class="progress-label">
-                <span style="color: var(--text-muted);">RÉPUTATION</span>
-                <span>82% <span style="color: var(--accent-orange);">HONORÉ</span></span>
+                <span class="title">RÉPUTATION</span>
+                <span class="value">82% <span>HONORÉ</span></span>
             </div>
             <div class="bar-bg">
                 <div class="bar-fill"></div>
             </div>
         </div>
 
+        <!-- STATS DE COMBAT -->
         <div class="info-group">
             <div class="section-title">• Performances •</div>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="label">Classement</div>
-                    <div class="value">6<span style="color: var(--text-muted); font-size: 0.8rem;"> /852</span></div>
+                    <div class="value">6<span> /852</span></div>
                 </div>
                 <div class="stat-card">
                     <div class="label">Éliminations</div>
-                    <div class="value" style="color: var(--accent-orange);">46</div>
+                    <div class="value highlight">46</div>
                 </div>
                 <div class="stat-card" style="grid-column: span 2;">
                     <div class="label">Boss Éliminés</div>
@@ -245,21 +284,23 @@
             </div>
         </div>
 
+        <!-- STOCKAGE RÉSUMÉ -->
         <div class="info-group">
             <div class="section-title">• Capacité Stockage •</div>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="label">Items Stockés</div>
-                    <div class="value">2<span style="color: var(--text-muted); font-size: 0.8rem;"> /6</span></div>
+                    <div class="value">2<span> /6</span></div>
                 </div>
                 <div class="stat-card">
                     <div class="label">Légendaires</div>
-                    <div class="value">0<span style="color: var(--text-muted); font-size: 0.8rem;"> /2</span></div>
+                    <div class="value">0<span> /2</span></div>
                 </div>
             </div>
         </div>
 
-        <a href="inventaire.html" class="nav-button">Accéder au Coffre Virtuel ➔</a>
+        <!-- NAVIGATION AVEC TON NOUVEAU BOUTON ASYMÉTRIQUE -->
+        <a href="inventaire.html" class="nav-btn">Accéder au Coffre Virtuel ➔</a>
 
     </div>
 
