@@ -12,7 +12,6 @@
             --accent-orange: #FF8F00;
             --text-bright: #ffffff;
             --text-muted: #FFC107;
-            --text-empty: #757575;
             --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -113,15 +112,19 @@
             letter-spacing: 1px;
         }
 
-        .slot-empty {
-            border: 1px dashed var(--panel-border);
-            background-color: transparent;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            letter-spacing: 1px;
-            padding: 20px;
-        }
+        /* EMPLACEMENTS LIBRES GRISÉS */
+.slot-empty {
+    border: 1px dashed #222224; /* Pointillés gris foncé */
+    background-color: rgba(30, 30, 35, 0.2); /* Fond gris très sombre et transparent */
+    color: #55555a; /* Texte gris éteint */
+    justify-content: center;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: none;
+    pointer-events: none; /* Désactive les interactions sur les slots vides */
+}
 
         /* BOUTON RETOUR RE-STYLISE */
         .back-button {
@@ -176,14 +179,10 @@
             <div class="item-status">SÉCURISÉ</div>
         </div>
 
-        <div class="item-row slot-empty">
-            <style>color: var(--text-empty);
-            </style>
+       <div class="item-row slot-empty">
             [ EMPLACEMENT DISPONIBLE ]
         </div>
         <div class="item-row slot-empty">
-            <style>color: var(--text-empty);
-            </style>
             [ EMPLACEMENT DISPONIBLE ]
         </div>
 
