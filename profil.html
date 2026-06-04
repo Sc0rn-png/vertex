@@ -204,33 +204,29 @@
             color: var(--accent-gold); 
         }
 
-        /* BOUTON TACTIQUE RE-STYLISE */
-        .nav-btn {
+        /* BOUTON RETOUR RE-STYLISE */
+        .nav-button {
             display: block;
             width: 100%;
-            background-color: rgba(255, 184, 0, 0.02);
-            border: 1px solid rgba(255, 184, 0, 0.3);
+            background-color: var(--panel-border);
+            border: 1px solid var(--panel-border);
             color: var(--text-bright);
             padding: 14px;
             text-align: center;
             text-decoration: none;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             font-weight: bold;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            border-radius: 4px;
-            clip-path: polygon(0 0, 96% 0, 100% 30%, 100% 100%, 4% 100%, 0 70%);
-            transition: all 0.3s ease;
-            margin-top: 15px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            margin-top: 30px;
         }
 
-        .nav-btn:hover {
-            background-color: rgba(255, 184, 0, 0.08);
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-            letter-spacing: 4px;
+        .nav-button:hover {
+            border-color: var(--text-muted);
+            background-color: transparent;
             cursor: pointer;
-            box-shadow: 0 0 15px rgba(255, 184, 0, 0.15);
         }
     </style>
 </head>
@@ -300,7 +296,7 @@
         </div>
 
         <!-- NAVIGATION AVEC TON NOUVEAU BOUTON ASYMÉTRIQUE -->
-        <a href="inventaire.html" class="nav-btn">Accéder au Coffre Virtuel ➔</a>
+        <a href="inventaire.html" class="nav-button">Accéder au Coffre Virtuel ➔</a>
 
     </div>
 
