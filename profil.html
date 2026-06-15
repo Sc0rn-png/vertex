@@ -203,59 +203,56 @@
         }
 
         /* ======================================================== */
-        /* ZONE DE NAVIGATION CENTRALISÉE ET ÉPURÉE */
+        /* BOUTON PRINCIPAL (VOTRE INVENTAIRE) */
         /* ======================================================== */
-        .navigation-zone {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px;
-            margin-top: 35px;
-            padding-top: 10px;
+        .nav-button {
+            display: block;
+            width: 100%;
+            background-color: var(--panel-border);
+            border: 1px solid var(--panel-border);
+            color: var(--text-bright);
+            padding: 14px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            margin-top: 30px;
         }
 
-        /* Bouton inventaire ultra-discret (Style lien OS tactile) */
-        .btn-inventaire-discret {
+        .nav-button:hover {
+            border-color: var(--text-muted);
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        /* ======================================================== */
+        /* BOUTON RETOUR DISCRET ET CENTRÉ (JOURNAL DE BORD) */
+        /* ======================================================== */
+        .return-zone {
+            display: flex;
+            justify-content: center;
+            margin-top: 18px;
+            padding-bottom: 5px;
+        }
+
+        .btn-retour-discret {
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.7rem;
             font-weight: bold;
             color: var(--text-muted);
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             transition: color 0.2s ease;
-            padding: 5px 10px;
+            padding: 5px 15px;
         }
 
-        .btn-inventaire-discret:hover {
-            color: var(--accent-gold);
-        }
-
-        /* Bouton retour blanc impeccable, centré et compact */
-        .btn-retour-blanc {
-            font-family: 'Courier New', Courier, monospace;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.7rem;
-            font-weight: bold;
-            tracking-widest: 2px;
-            color: #050505;
-            background-color: #ffffff;
-            border: 1px solid #ffffff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.2s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        .btn-retour-blanc:hover {
-            background-color: #e0e0e6;
-            border-color: #e0e0e6;
+        .btn-retour-discret:hover {
+            color: var(--text-normal);
             cursor: pointer;
         }
     </style>
@@ -320,10 +317,10 @@
             </div>
         </div>
 
-        <div class="navigation-zone">
-            <a href="inventaire.html" class="btn-inventaire-discret">Consulter l'inventaire ➔</a>
-            
-            <a href="index.html" class="btn-retour-blanc">← Journal de bord</a>
+        <a href="inventaire.html" class="nav-button">Votre Inventaire ➔</a>
+
+        <div class="return-zone">
+            <a href="index.html" class="btn-retour-discret">← Journal de bord</a>
         </div>
 
     </div>
