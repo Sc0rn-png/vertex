@@ -131,4 +131,202 @@
         }
 
         .progress-label .value span {
-            color: var(--accent-gold
+            color: var(--accent-gold);
+        }
+
+        .bar-bg {
+            background-color: #141417;
+            height: 10px;
+            border-radius: 2px;
+            padding: 2px;
+        }
+
+        .bar-fill {
+            background-color: var(--accent-gold);
+            width: 82%;
+            height: 100%;
+            border-radius: 1px;
+        }
+
+        /* SECTIONS ET GRILLES */
+        .section-title {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .info-group {
+            margin-bottom: 25px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .stat-card {
+            background-color: rgba(20, 20, 23, 0.2);
+            border: 1px solid var(--panel-border);
+            padding: 14px 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .stat-card .label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .stat-card .value {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: var(--text-bright);
+        }
+
+        .stat-card .value span {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: normal;
+        }
+
+        .stat-card .value.highlight {
+            color: var(--accent-gold); 
+        }
+
+        /* ======================================================== */
+        /* ZONE DE NAVIGATION CENTRALISÉE ET ÉPURÉE */
+        /* ======================================================== */
+        .navigation-zone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 35px;
+            padding-top: 10px;
+        }
+
+        /* Bouton inventaire ultra-discret (Style lien OS tactile) */
+        .btn-inventaire-discret {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: var(--text-muted);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: color 0.2s ease;
+            padding: 5px 10px;
+        }
+
+        .btn-inventaire-discret:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Bouton retour blanc impeccable, centré et compact */
+        .btn-retour-blanc {
+            font-family: 'Courier New', Courier, monospace;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+            tracking-widest: 2px;
+            color: #050505;
+            background-color: #ffffff;
+            border: 1px solid #ffffff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn-retour-blanc:hover {
+            background-color: #e0e0e6;
+            border-color: #e0e0e6;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="phone-container">
+        
+        <div class="header-box">
+            <div class="sub">Opérateur VERTEX</div>
+            <h1>N°0825</h1>
+        </div>
+
+        <div class="meta-line">
+            M.E.S : 01.06.2026
+        </div>
+
+        <div class="solde-box">
+            <div class="amount">56.402$</div>
+            <div class="label">Crédits Actuels</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-label">
+                <span class="title">RÉPUTATION</span>
+                <span class="value">82% <span>HONORÉ</span></span>
+            </div>
+            <div class="bar-bg">
+                <div class="bar-fill"></div>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div class="section-title">• Performances •</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Classement</div>
+                    <div class="value highlight">6<span> /852</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Éliminations</div>
+                    <div class="value highlight">46</div>
+                </div>
+                <div class="stat-card" style="grid-column: span 2;">
+                    <div class="label">Boss Éliminés</div>
+                    <div class="value">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-group">
+            <div class="section-title">• Capacité Stockage •</div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="label">Items Stockés</div>
+                    <div class="value highlight">2<span> /6</span></div>
+                </div>
+                <div class="stat-card">
+                    <div class="label">Légendaires</div>
+                    <div class="value">0<span> /2</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-zone">
+            <a href="inventaire.html" class="btn-inventaire-discret">Consulter l'inventaire ➔</a>
+            
+            <a href="index.html" class="btn-retour-blanc">← Journal de bord</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
