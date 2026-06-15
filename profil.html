@@ -18,6 +18,7 @@
             --text-bright: #ffffff;      /* Pour les chiffres principaux et grands titres */
             --text-normal: #e0e0e6;      /* Pour le texte standard */
             --text-muted: #55555a;       /* Pour TOUS les petits labels secondaires */
+            --text-grey: ##5c5c5c; /* pour les textes grisées */
             --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
@@ -228,6 +229,12 @@
             background-color: transparent;
             cursor: pointer;
         }
+         .nav-button1:hover {
+            border-color: var(--text-grey);
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -298,10 +305,7 @@
         <!-- NAVIGATION AVEC TON NOUVEAU BOUTON ASYMÉTRIQUE -->
         <a href="inventaire.html" class="nav-button">Votre Inventaire ➔</a>
 
-        <div class="px-5 py-6 flex justify-center">
-    <a href="index.html" class="inline-flex items-center gap-2 font-mono text-[11px] font-bold tracking-widest text-black bg-neutral-100 hover:bg-neutral-200 border border-neutral-200 px-4 py-2.5 rounded uppercase transition-all duration-200 shadow-md no-underline">
-        ← Journal de bord
-    </a>
+        <a href="inventaire.html" class="nav-button">Votre Inventaire ➔</a>
 </div>
 
     </div>
