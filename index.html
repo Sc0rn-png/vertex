@@ -6,184 +6,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJET : VERTEX</title>
-    <!-- Tailwind CSS pour le style -->
+    
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
     <style>
-          body {
+        body {
             background-color: #0a0a0a;
         }
-    <div class="w-full max-w-md mx-auto px-4 pt-6 pb-2 text-center font-mono">
-    
-    <p class="text-[10px] uppercase tracking-[0.25em] text-neutral-500 mb-4">// ACCÈS AUX MODULES</p>
 
-    <div class="flex flex-col gap-3">
-        
-        <a href="#journal" class="flex items-center justify-between bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 text-neutral-200 hover:text-white px-5 py-4 rounded-xl transition-all duration-200 group text-left shadow-lg">
-            <div class="flex flex-col">
-                <span class="text-xs font-bold tracking-wider uppercase">Consulter le Journal</span>
-                <span class="text-[10px] text-neutral-500 mt-0.5">Suivre la production en temps réel</span>
-            </div>
-            <span class="text-xs transition-transform duration-200 group-hover:translate-x-1 text-neutral-500 group-hover:text-neutral-300">⬇</span>
-        </a>
+        /* ANCIENS STYLES CONSERVÉS POUR TES BOUTONS ASYMÉTRIQUES SI TU EN AS BESOIN DANS TES AUTRES MODULES */
+        .nav-button, .back-button {
+            display: block;
+            width: 100%;
+            background-color: #0b0b0d;
+            border: 1px solid #141417;
+            color: #55555a;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
+            margin-top: 25px;
+        }
 
-        <a href="https://ulule.com/ton-projet" target="_blank" class="flex items-center justify-between bg-white hover:bg-neutral-200 text-black px-5 py-4 rounded-xl transition-all duration-200 group text-left shadow-xl border border-white">
-            <div class="flex flex-col">
-                <span class="text-xs font-bold tracking-wider uppercase">Soutenir le Projet</span>
-                <span class="text-[10px] text-neutral-600 mt-0.5">Accéder à la campagne de financement</span>
-            </div>
-            <span class="text-xs transition-transform duration-200 group-hover:translate-x-1 text-black">➔</span>
-        </a>
+        .nav-button:hover, .back-button:hover {
+            border-color: #ffb800;
+            color: #ffffff;
+            background-color: transparent;
+            cursor: pointer;
+        }
 
-    </div>
-    
-    <hr class="border-neutral-800 my-8 w-1/4 mx-auto">
-</div>
-      /* BOUTON MINIMALISTE PREMIER-SECOURS */
-.nav-button, .back-button {
-    display: block;
-    width: 100%;
-    background-color: #0b0b0d; /* Même fond que tes cartes */
-    border: 1px solid #141417; /* Bordure sombre qui se fond dans le décor */
-    color: var(--text-muted);
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    border-radius: 6px;
-    transition: all 0.2s ease-in-out;
-    margin-top: 25px;
-}
+        .app-container-btn {
+            display: inline-block;
+            min-width: 250px;
+            background-color: rgba(255, 184, 0, 0.01);
+            border: 1px solid rgba(255, 184, 0, 0.25);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 16px 30px;
+            clip-path: polygon(0 0, 95% 0, 100% 30%, 100% 100%, 5% 100%, 0 70%);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
 
-/* REVEIL DU BOUTON AU SURVOL */
-.nav-button:hover, .back-button:hover {
-    border-color: var(--accent-orange);
-    color: var(--text-bright);
-    background-color: transparent;
-    cursor: pointer;
-}
-/* STYLISATION DU BLOC DE REDIRECTION (JOURNAL) */
-.app-redirect-section {
-    width: 100%;
-    max-width: 760px; /* Aligné sur la largeur de ton bloc Prochaine Étape */
-    margin: 50px auto; /* Centre le bloc et gère l'espace haut/bas */
-    text-align: center; /* Centre le sous-titre et le bouton */
-}
-
-.app-subtitle {
-    font-size: 0.75rem;
-    color: #55555a; /* Gris mat identique à tes autres labels */
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    font-weight: 600;
-}
-
-/* LE VRAI BOUTON ENCADRÉ */
-.app-container-btn {
-    display: inline-block;
-    min-width: 250px; /* Donne une belle largeur minimale au bouton */
-    background-color: rgba(255, 184, 0, 0.01); /* Fond presque noir */
-    border: 1px solid rgba(255, 184, 0, 0.25); /* Bordure fine Or/Jaune atténuée */
-    color: #ffffff; /* Texte blanc pur */
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 16px 30px;
-    
-    /* Découpe asymétrique style "Protocole / Tech" */
-    clip-path: polygon(0 0, 95% 0, 100% 30%, 100% 100%, 5% 100%, 0 70%);
-    
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-/* ACTION AU SURVOL */
-.app-container-btn:hover {
-    background-color: rgba(255, 184, 0, 0.08); /* Le fond se colore légèrement */
-    border-color: #ffb800; /* La bordure s'illumine en Jaune/Or */
-    color: #ffb800; /* Le texte passe en Jaune/Or */
-    letter-spacing: 4px; /* Micro-animation d'écartement des lettres */
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(255, 184, 0, 0.15); /* Effet de lueur discret */
-}
-</style>
+        .app-container-btn:hover {
+            background-color: rgba(255, 184, 0, 0.08);
+            border-color: #ffb800;
+            color: #ffb800;
+            letter-spacing: 4px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 184, 0, 0.15);
+        }
+    </style>
 </head>
 <body class="text-neutral-200 font-sans antialiased max-w-md mx-auto px-5 py-8 selection:bg-amber-500 selection:text-black">
 
-    <!-- HEADER ENCADRÉ -->
     <header class="border border-neutral-800 p-5 text-center mb-8 bg-neutral-900/30 rounded-xl">
         <span class="text-[10px] font-mono tracking-widest text-amber-500 uppercase">v1.0 — PROTOCOLE</span>
         <h1 class="text-2xl font-black tracking-tight uppercase text-neutral-100 mt-1">PROJET : VERTEX</h1>
     </header>
 
-    <!-- LIGNE DE SÉPARATION SUBTILE -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
-    <!-- SECTION AVANCÉE DU PROJET -->
-    <section class="text-center mb-12 bg-neutral-900/20 border border-neutral-900 p-4 rounded-xl">
+    <section class="text-center mb-8 bg-neutral-900/20 border border-neutral-900 p-4 rounded-xl">
         <h2 class="text-xs font-mono tracking-wider uppercase text-neutral-400 mb-3">Avancée du projet</h2>
         
         <div class="flex items-center justify-center gap-3">
             <span class="text-sm font-mono font-bold text-amber-500">2%</span>
             
             <div class="relative w-64 h-6 border border-amber-500/30 bg-black rounded overflow-hidden p-0.5">
-                
                 <div class="h-full bg-amber-500 transition-all duration-500 w-[2%]"></div>
-                
                 <div class="absolute inset-0 flex justify-between pointer-events-none opacity-20 px-0.5 py-0.5">
                     <div class="w-full h-full" style="background-image: linear-gradient(to right, #000 1px, transparent 1px); background-size: 6.4px 100%;"></div>
                 </div>
-
             </div>
         </div>
     </section>
 
-     <div class="border-b border-neutral-900 mb-8"></div>
+    <div class="w-full text-center font-mono my-8">
+        <p class="text-[10px] uppercase tracking-[0.25em] text-neutral-500 mb-4">// ACCÈS DIRECTS</p>
+        <div class="flex flex-col gap-3">
+            
+            <a href="#journal-section" class="flex items-center justify-between bg-neutral-900/40 border border-neutral-800 hover:border-neutral-700 text-neutral-200 hover:text-white px-5 py-4 rounded-xl transition-all duration-200 group text-left shadow-lg">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold tracking-wider uppercase">Consulter le Journal</span>
+                    <span class="text-[10px] text-neutral-500 mt-0.5">Suivre la production en temps réel</span>
+                </div>
+                <span class="text-xs transition-transform duration-200 group-hover:translate-y-1 text-neutral-500 group-hover:text-neutral-300">⬇</span>
+            </a>
 
-    <!-- BLOC INTERMÉDIAIRE : ACCÈS APP -->
-<div class="app-redirect-section bg-neutral-900/40 border border-neutral-800 rounded-xl p-6 text-center shadow-[0_0_20px_rgba(245,158,11,0.05)] relative overflow-hidden my-8">
-    
-    <div class="flex items-center justify-center gap-2 mb-1">
-        <span class="relative flex h-2 w-2">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
-        </span>
-        <p class="text-[10px] font-mono text-amber-500 uppercase tracking-widest font-bold">NOUVEAU</p>
+            <a href="https://ulule.com/ton-projet" target="_blank" class="flex items-center justify-between bg-white hover:bg-neutral-200 text-black px-5 py-4 rounded-xl transition-all duration-200 group text-left shadow-xl border border-white">
+                <div class="flex flex-col">
+                    <span class="text-xs font-bold tracking-wider uppercase">Soutenir le Projet</span>
+                    <span class="text-[10px] text-neutral-600 mt-0.5">Accéder à la campagne de financement</span>
+                </div>
+                <span class="text-xs transition-transform duration-200 group-hover:translate-x-1 text-black">➔</span>
+            </a>
+
+        </div>
     </div>
 
-    <p class="text-xs font-mono text-neutral-400 tracking-wider uppercase mb-5">DÉCOUVRIR LE PROFIL OPÉRATEUR</p>
-    
-    <a href="profil.html" class="inline-block w-full bg-amber-500 hover:bg-amber-600 text-black font-mono font-black text-sm py-3 px-6 rounded-lg uppercase tracking-widest transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] shadow-[0_4px_12px_rgba(245,158,11,0.2)]">
-        VOIR MON PROFIL
-    </a>
-    <p class="text-[10px] font-mono text-neutral-500 uppercase tracking-wide leading-relaxed max-w-xs mx-auto border-t border-neutral-800/60 pt-3">
-        // Aperçu de l'interface opérateur. Ce module sera directement accessible pour les joueurs sur les bornes tactiles physiques au sein du premier lieu test.
-    </p>
-</div>
-    
-     <div class="border-b border-neutral-900 mb-8"></div>
-    
+    <div class="border-b border-neutral-900 mb-8"></div>
 
-    <!-- SECTION NOTES DE MAJ -->
-    <section class="mb-12">
+    <div class="bg-neutral-900/40 border border-neutral-800 rounded-xl p-6 text-center shadow-[0_0_20px_rgba(245,158,11,0.05)] relative overflow-hidden mb-8">
+        <div class="flex items-center justify-center gap-2 mb-1">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
+            </span>
+            <p class="text-[10px] font-mono text-amber-500 uppercase tracking-widest font-bold">NOUVEAU</p>
+        </div>
+
+        <p class="text-xs font-mono text-neutral-400 tracking-wider uppercase mb-5">DÉCOUVRIR LE PROFIL OPÉRATEUR</p>
+        
+        <a href="profil.html" class="inline-block w-full bg-amber-500 hover:bg-amber-600 text-black font-mono font-black text-sm py-3 px-6 rounded-lg uppercase tracking-widest transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] shadow-[0_4px_12px_rgba(245,158,11,0.2)]">
+            VOIR MON PROFIL
+        </a>
+        <p class="text-[10px] font-mono text-neutral-500 uppercase tracking-wide leading-relaxed max-w-xs mx-auto border-t border-neutral-800/60 pt-3 mt-3">
+            // Aperçu de l'interface opérateur. Ce module sera directement accessible pour les joueurs sur les bornes tactiles physiques au sein du premier lieu test.
+        </p>
+    </div>
+        
+    <div class="border-b border-neutral-900 mb-8"></div>
+
+    <section id="journal-section" class="mb-12">
         <div class="flex items-center justify-center gap-2 mb-8">
             <div class="w-1 h-1 bg-amber-500 rounded-full"></div>
             <h2 class="text-xs font-mono tracking-widest text-neutral-400 uppercase">NOTES DE MAJ</h2>
             <div class="w-1 h-1 bg-amber-500 rounded-full"></div>
         </div>
         
-        <!-- Conteneur de la Timeline -->
         <div class="relative grid grid-cols-2 gap-6 px-1">
             <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-neutral-800 -translate-x-1/2 flex flex-col justify-between items-center py-2">
                 <div class="w-2 h-2 rounded-full bg-neutral-950 border border-neutral-500"></div>
                 <div class="w-2 h-2 rounded-full bg-neutral-950 border border-neutral-500"></div>
             </div>
 
-            <!-- Colonne Gauche -->
             <div class="flex flex-col items-center text-center space-y-3">
                 <div class="w-36 h-36 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900 shadow-xl">
                     <img src="images/res.png" alt="Arène 4" class="w-full h-full object-cover">
@@ -191,10 +156,8 @@
                 <p class="text-xs text-neutral-400 leading-relaxed px-1">
                     Cette semaine j'ai commencé la documentation du projet sur les réseaux.
                 </p>
-                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors"></button>
             </div>
 
-            <!-- Colonne Droite -->
             <div class="flex flex-col items-center text-center space-y-3">
                 <div class="w-36 h-36 rounded-2xl border border-neutral-800 overflow-hidden bg-neutral-900 shadow-xl">
                     <img src="images/room (1).png" alt="Tenues" class="w-full h-full object-cover">
@@ -202,15 +165,12 @@
                 <p class="text-xs text-neutral-400 leading-relaxed px-1">
                     Je vais maintenant commencer la définition du Lore central et des sous-univers.
                 </p>
-                <button class="text-[10px] text-neutral-600 font-mono font-bold hover:text-neutral-400 transition-colors"></button>
             </div>
         </div>
     </section>
 
-    <!-- LIGNE DE SÉPARATION SUBTILE -->
     <div class="border-b border-neutral-900 mb-8"></div>
 
-    <!-- SECTION PROCHAINE ÉTAPE -->
     <section class="text-center mb-12">
         <h2 class="text-xs font-mono tracking-widest text-neutral-400 uppercase mb-4">PROCHAINE ÉTAPE</h2>
         <div class="w-full h-auto border border-neutral-800 rounded-xl overflow-hidden bg-neutral-900 shadow-xl">
@@ -218,13 +178,8 @@
         </div>
     </section>
 
-    <!-- LIGNE DE SÉPARATION -->
-     <div class="border-b border-neutral-900 mb-8"></div>
+    <div class="border-b border-neutral-900 mb-8"></div>
 
-    </div> </body>
-    <!-- ======================================================== -->
-    <!-- 1. MASTER-PLAN DE PRODUCTION (2026 → 2029) -->
-    <!-- ======================================================== -->
     <section class="space-y-8 mb-16">
         <div class="text-center md:text-left">
             <h2 class="text-lg font-black tracking-wider uppercase text-neutral-100">1. MASTER-PLAN DE PRODUCTION</h2>
@@ -232,8 +187,6 @@
         </div>
 
         <div class="space-y-6">
-            
-            <!-- PHASE 0 -->
             <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3">
                 <div class="border-b border-neutral-800 pb-2">
                     <h3 class="text-xs font-mono font-bold text-amber-500">PHASE 0 — Pré-production conceptuelle (2026)</h3>
@@ -245,13 +198,12 @@
                     <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Définition visuelle (style, matériaux, codes graphiques)</li>
                     <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Création des premières illustrations physiques (“paper first”)</li>
                     <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Définition des systèmes de jeu (XP, monnaie, factions)</li>
-                    <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Délimitation du scope (taille, expériences jouables)</li>
+                    <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Délimitation du scope (taille, experiences jouables)</li>
                     <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Étude économique : modèles potentiels (bar, club privé)</li>
                     <li class="flex items-start gap-2 text-neutral-500"><span class="text-neutral-700">✖</span> Benchmark mondial (expériences IRL / game design)</li>
                 </ul>
             </div>
 
-            <!-- PHASE 1 -->
             <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-80">
                 <div class="border-b border-neutral-800 pb-2">
                     <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 1 — Prototype narratif & gameplay (fin 2026)</h3>
@@ -266,58 +218,50 @@
                 </ul>
             </div>
 
-            <!-- PHASE 2 -->
             <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-60">
                 <div class="border-b border-neutral-800 pb-2">
                     <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 2 — Pré-production structurelle (2027)</h3>
                     <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Passer du concept à la faisabilité immobilière et technique.</p>
                 </div>
                 <ul class="space-y-2 text-xs font-mono text-neutral-500">
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Recherche active de partenaires / investisseurs</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Étude architecturale préliminaire complète</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Choix des matériaux réels (bois, béton, marbre, lumière)</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Budgétisation (construction, scénographie, costumes, staff)</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Création du “Game Bible VERTEX” (référence absolue)</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Développement précis du système économique interne</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Recherche active de partenaires / investisseurs</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Étude architecturale préliminaire complète</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Choix des matériaux réels (bois, béton, marbre, lumière)</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Budgétisation (construction, scénographie, costumes, staff)</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Création du “Game Bible VERTEX” (référence absolue)</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-50 select-none pointer-events-none"> Développement précis du système économique interne</span></li>
                 </ul>
             </div>
             
-            <!-- PHASE 3 -->
             <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-50">
                 <div class="border-b border-neutral-800 pb-2">
                     <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 3 — Production lourde (2028)</h3>
                     <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Construire le lieu et produire l’expérience totale.</p>
                 </div>
                 <ul class="space-y-2 text-xs font-mono text-neutral-500">
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Gros travaux + déploiement de la scénographie</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Fabrication artisanale des accessoires, costumes et props</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Formation du staff PNJ (jeu d’acteur, rituels, protocoles)</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Intégration des systèmes d’éclairage, de son et d’ambiance</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Écriture des quêtes, événements saisonniers et factions</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Lancement du Beta test interne + public restreint</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Gros travaux + déploiement de la scénographie</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Fabrication artisanale des accessoires, costumes et props</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Formation du staff PNJ (jeu d’acteur, rituels, protocoles)</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Intégration des systèmes d’éclairage, de son et d’ambiance</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Écriture des quêtes, événements saisonniers et factions</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-40 select-none pointer-events-none"> Lancement du Beta test interne + public restreint</span></li>
                 </ul>
             </div>
 
-            <!-- PHASE 4 -->
             <div class="border border-neutral-800 bg-neutral-900/10 rounded-xl p-5 space-y-3 opacity-40">
                 <div class="border-b border-neutral-800 pb-2">
                     <h3 class="text-xs font-mono font-bold text-neutral-400">PHASE 4 — Lancement (2029)</h3>
                     <p class="text-[10px] text-neutral-500 mt-0.5">Objectif : Ouverture et stabilisation de l'infrastructure.</p>
                 </div>
                 <ul class="space-y-2 text-xs font-mono text-neutral-500">
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-30 select-none pointer-events-none"> Soft opening (phase de test de 3 mois)</li>
-                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-30 select-none pointer-events-none"> Ajustements et équilibrages en live</li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-30 select-none pointer-events-none"> Soft opening (phase de test de 3 mois)</span></li>
+                    <li class="flex items-start gap-2"><span class="text-neutral-700">✖</span><span class="blur-[2px] opacity-30 select-none pointer-events-none"> Ajustements et équilibrages en live</span></li>
                     <li class="flex items-start gap-2 text-amber-500/60 font-bold"><span class="text-neutral-700">✖</span> Lancement officiel avant le ★ 8 décembre 2029</li>
                 </ul>
             </div>
-
         </div>
     </section>
 
-    <!-- LIGNE DE SÉPARATION -->
-    <div class="border-b border-neutral-900 mb-8"></div>
-
- 
     <footer class="mt-20 py-4 text-center font-mono text-[9px] text-neutral-600 tracking-widest uppercase border-t border-neutral-950">
         PROJET VERTEX — DOCUMENT DE PRODUCTION — NE PAS DIVULGUER
     </footer>
